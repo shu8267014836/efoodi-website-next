@@ -1,7 +1,7 @@
 export default function Header_seller() {
   return (
-      <nav class="p-4">
-        <div class="max-w-screen-xl bg-white flex flex-wrap items-center justify-between mx-auto shadow-2xl p-4 px-10 rounded-full">
+      <nav class="m-auto pt-8">
+        <div class="md:w-9/12 bg-white flex flex-wrap items-center justify-between mx-auto shadow-2xl p-4 px-10 rounded-full">
           <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
               <img src="/logo.png" class="h-8" alt="Flowbite Logo" />
           </a>

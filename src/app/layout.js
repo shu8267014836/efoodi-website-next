@@ -1,6 +1,13 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import Script from 'next/script';
+
+<Script
+  src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"
+  strategy="beforeInteractive"
+/>
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

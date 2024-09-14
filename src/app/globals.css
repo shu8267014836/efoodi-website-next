@@ -123,8 +123,8 @@ a {
   .myinput{
     @apply text-sm rounded-lg focus:ring-gray-700 focus:border-gray-700 block w-full p-2.5;
   }
-  input::placeholder{
-    font-weight: bold; color:#707070 !important;
+  input::placeholder, textarea::placeholder{
+    font-weight: bold; color:#8a8a8a !important;
   }
   input:focus, select:focus{
     font-weight: bold;
@@ -133,7 +133,7 @@ a {
     color: #000000;
   }
   select:invalid,select option[value=""] {
-    color: #707070;
+    color: #8a8a8a;
     font-weight: bold;
   }
   .myborder{
