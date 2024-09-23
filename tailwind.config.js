@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      scale : {
+        reverse: '-1',
+      },
       backgroundImage : {
         heroimage : "url('/hero-image.webp')",
       },

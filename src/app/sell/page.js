@@ -20,7 +20,7 @@ export default function Sell() {
       </div>
 
       <div class="md:w-11/12 mx-auto -mt-20">
-        <section className="bg-gray-200 rounded-xl grid grid-cols-5 p-8 text-center mb-16">
+        <section className="bg-gray-100 rounded-xl grid grid-cols-5 p-8 text-center mb-16">
           <div className="flex-vr">
             <div className="flex-hz"><img src="/target-audience.webp" alt="image" className="w-1/3 mb-4" /></div>
             <div className="font-bold ">Sell to millions of eFOODi <br/> customers</div>

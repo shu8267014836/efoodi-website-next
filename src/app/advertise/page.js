@@ -52,7 +52,7 @@ export default function Advertise() {
               </div>
             </div>
 
-            <div className="bg-gray-200 rounded-xl p-6">
+            <div className="bg-gray-100 rounded-xl p-6">
               <h2 className="text-2xl font-bold mb-5 text-center">Ready to grow your business?</h2>
               <Form1 />
             </div>
