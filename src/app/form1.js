@@ -4,18 +4,18 @@ export default function Form1() {
   return (
         <form class="myform mx-8">
             <div class="mb-5">
-                <input type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="Business Name*" required />
+                <input type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="اسم المشروع*" required />
             </div>
             <div class="mb-5">
                 <select id="" class="myinput px-8 border border-gray-600 bg-transparent" required>
-                <option value="" selected>Type of Business</option>
+                <option value="" selected>نوع المشروع</option>
                 <option>Canada</option>
                 <option>France</option>
                 <option>Germany</option>
                 </select>
             </div>
             <div class="mb-5">
-                <input type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="Contact Person Name*" required />
+                <input type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="اسم الشخص للتواصل*" required />
             </div>
             
             <div class="flex mb-5">
@@ -34,10 +34,10 @@ export default function Form1() {
             </div>
 
             <div class="mb-5">
-                <input type="email" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="Type Email here*" required />
+                <input type="email" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="اكتب بريدك الالكتروني*" required />
             </div>
             <div className="block px-8">
-                <button type="submit" class="text-white bg-myorange font-medium rounded-full w-full text-sm py-2.5 text-center">Submit</button>
+                <button type="submit" class="text-white bg-myorange font-medium rounded-full w-full text-sm py-2.5 text-center">قدم</button>
             </div>
         </form>
  );

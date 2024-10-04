@@ -13,10 +13,10 @@ export default function Form2() {
                 </select>
             </div>
             <div class="mb-6">
-                <input type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="Enter Full Name*" required />
+                <input type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="اختر موضوعًا*" required />
             </div>
             <div class="mb-6">
-                <input type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="Contact Person Name*" required />
+                <input type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="أدخل الاسم الكامل*" required />
             </div>
             
             <div class="flex mb-6">
@@ -35,15 +35,15 @@ export default function Form2() {
             </div>
 
             <div class="mb-6">
-                <input type="email" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="Type Email here*" required />
+                <input type="email" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="اكتب البريد الإلكتروني هنا*" required />
             </div>
 
             <div class="mb-6">
-                <textarea type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="Type Your Message*" rows={2} required />
+                <textarea type="text" id="" class="myinput px-8 border border-gray-600 bg-transparent" placeholder="اكتب رسالتك*" rows={2} required />
             </div>
 
             <div className="block px-8">
-                <button type="submit" class="text-white bg-myorange font-medium rounded-full w-full text-sm py-2.5 text-center">Send Query</button>
+                <button type="submit" class="text-white bg-myorange font-medium rounded-full w-full text-sm py-2.5 text-center">أرسل استعلامًا</button>
             </div>
         </form>
  );

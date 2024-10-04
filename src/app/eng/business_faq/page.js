@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
-import "../globals.css";
+import "../../globals.css";
 import Nav from "../header-seller";
 import Footer from "../footer";
 import { initAccordions } from "flowbite";
 import { FaAngleDown } from "react-icons/fa6";
 
-export default function Customer_faq() {
+export default function Business_faq() {
 
   useEffect(() => {
     initAccordions();
