@@ -5,14 +5,17 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="mt-12">
-      <div className="grid grid-cols-3 bg-cyan-50 rounded-2xl p-4 px-20 items-end">
-        <div className="p-4 absolute contents"><img class="-mt-20 -mb-10" alt="image" src="/location.webp" /></div>
-        <div class="flex flex-col col-span-2 pb-12 mr-24">
-          <h2 class="sm:text-2xl md:text-3xl xl:text-5xl mb-4 font-bold [&&]:leading-tight">حمل تطبق فودي الان</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-3 bg-cyan-50 rounded-2xl p-4 lg:px-20 items-end">
+        <div className="p-6 lg:absolute lg:contents ">
+          <img class="lg:-mt-20 lg:-mb-10" alt="image" src="/location.webp" />
+        </div>
+
+        <div class="flex flex-col col-span-2 pb-12 lg:mr-24">
+          <h2 class="text-2xl xl:text-5xl mb-4 font-bold [&&]:leading-tight">حمل تطبق فودي الان</h2>
           <div class="mb-6 text-lg leading-relaxed text-gray-500 ">لطلبات وخبرة توصيل رائعة حمل التطبيق على 
-          <br />جهازك المحمول الان</div>
+          <br className="hidden lg:block" />جهازك المحمول الان</div>
           
-          <div className="flex">
+          <div className="lg:flex">
             <div class="flex justify-center">
               <button class="text-white bg-gray-800 py-3 px-6 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center"> 
                 <div class="text-3xl me-3"><FaApple /></div>
@@ -23,7 +26,7 @@ export default function Footer() {
               </button>
             </div>
 
-            <div class="flex justify-center mx-6">
+            <div class="flex justify-center mx-6 my-4 lg:my-0">
               <button class="text-white bg-gray-800 py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center"> 
                 <div class="text-3xl me-3"><FaGooglePlay /></div>
                 <div>
@@ -93,7 +96,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4 font-bold">
+          <div class="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-4 font-bold">
             <div>
               <p class="text-xs text-gray-400 uppercase">روابط سريعة</p>
 

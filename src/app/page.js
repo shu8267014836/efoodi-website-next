@@ -6,7 +6,7 @@ import { SiHuawei } from "react-icons/si";
 
 export default function Home() {
   return (
-    <div class="md:w-10/12" dir="rtl">
+    <div class="lg:w-10/12" dir="rtl">
       <Nav />
 
       <section class="text-black body-font mx-6 mb-16">

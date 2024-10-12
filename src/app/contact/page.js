@@ -15,8 +15,10 @@ export default function Contact() {
             <h2 className="text-2xl font-bold mb-3">تواصل معنا</h2>
             <div className="mb-6 text-gray-500">يسرنا ان نسمع من عملائنا</div>
 
+            <div className="px-12 mb-4"><img class="sm:block lg:hidden" alt="image" src="/contact.webp" /></div>
+
             <form class="myform">
-              <div className="grid grid-cols-2">
+              <div className="grid lg:grid-cols-2">
                 <div>
                   <div class="mb-6">
                     <label for="countries" class="block mb-2 text-md text-gray-900 font-bold">الموضوع</label>
@@ -65,17 +67,17 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="pr-14 mr-16"><img class=" " alt="image" src="/contact.webp" /></div>
+                <div className="pr-14 mr-16"><img class="hidden lg:block" alt="image" src="/contact.webp" /></div>
               </div>
 
               <div class="mb-6">
                 <label class="block mb-2 text-md text-gray-900 font-bold">الرسائل</label>
-                <textarea type="text" id="" class="w-9/12 myinput px-6 border border-gray-600 bg-transparent" placeholder="اكتب الرسالة هنا*" rows={3} required />
+                <textarea type="text" id="" class="lg:w-9/12 myinput px-6 border border-gray-600 bg-transparent" placeholder="اكتب الرسالة هنا*" rows={3} required />
               </div>
 
               <div class="my-8 text-xs font-medium text-gray-600">من خلال اتخاذ هذا الإجراء، فإنك توافق على شروطنا وأحكامنا وسياسة الخصوصية</div>
 
-              <div className="block w-4/12">
+              <div className="block lg:w-4/12">
                 <button type="submit" class="text-white bg-myorange font-medium rounded-full w-full text-sm py-2.5 text-center">قدم</button>
               </div>
             </form>

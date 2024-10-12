@@ -14,9 +14,10 @@ export default function Contact() {
 
             <h2 className="text-2xl font-bold mb-3">Contact Us</h2>
             <div className="mb-6 text-gray-500">We would love to hear from you.</div>
+            <div className="px-12 mb-4"><img class="sm:block lg:hidden" alt="image" src="/contact.webp" /></div>
 
             <form class="myform">
-              <div className="grid grid-cols-2">
+              <div className="grid lg:grid-cols-2">
                 <div>
                   <div class="mb-6">
                     <label for="countries" class="block mb-2 text-md text-gray-900 font-bold">Subject</label>
@@ -65,17 +66,17 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="pl-14 ml-16"><img class=" " alt="image" src="/contact.webp" /></div>
+                <div className="pl-14 ml-16"><img class="hidden lg:block" alt="image" src="/contact.webp" /></div>
               </div>
 
               <div class="mb-6">
                 <label class="block mb-2 text-md text-gray-900 font-bold">Message</label>
-                <textarea type="text" id="" class="w-9/12 myinput px-6 border border-gray-600 bg-transparent" placeholder="Type Your Message*" rows={3} required />
+                <textarea type="text" id="" class="lg:w-9/12 myinput px-6 border border-gray-600 bg-transparent" placeholder="Type Your Message*" rows={3} required />
               </div>
 
               <div class="my-8 text-xs font-medium text-gray-600">By making this action you agree to our Terms & conditions and Privacy Policy.</div>
 
-              <div className="block w-4/12">
+              <div className="block lg:w-4/12">
                 <button type="submit" class="text-white bg-myorange font-medium rounded-full w-full text-sm py-2.5 text-center">Submit</button>
               </div>
             </form>
