@@ -6,13 +6,13 @@ import { SiHuawei } from "react-icons/si";
 
 export default function Home() {
   return (
-    <div class="lg:w-10/12">
+    <div class="max-w-full lg:w-10/12">
       <Nav />
 
-      <section class="text-black body-font mx-6 mb-16">
-        <div class="grid grid-cols-2 items-end px-4 pt-5">
+      <section class="max-w-full text-black body-font mx-6 mb-16">
+        <div class="grid lg:grid-cols-2 items-end lg:px-4 pt-5">
           <div class="flex flex-col mb-16">
-            <h1 class="sm:text-2xl md:text-3xl xl:text-5xl mb-4 font-bold [&&]:leading-tight">
+            <h1 class="text-3xl xl:text-5xl mb-4 font-bold [&&]:leading-tight">
               Get your <span className="text-mypurple">favorite</span> food,
               delivered staright to your door.
             </h1>
@@ -21,12 +21,12 @@ export default function Home() {
               pickup.
             </div>
 
-            <div class="my-3 text-xl leading-relaxed text-gray-500 ">
+            <div class="my-4 text-xl leading-relaxed text-gray-500 text-center lg:text-left">
               Apps available to download on
             </div>
-            <div className="flex">
+            <div className="lg:flex">
               <div class="flex justify-center">
-                <button class="text-white bg-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
+                <button class="w-1/2 lg:w-auto scale-125 lg:scale-100 text-white bg-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
                   <div class="text-3xl me-3">
                     <FaApple />
                   </div>
@@ -38,8 +38,8 @@ export default function Home() {
                 </button>
               </div>
 
-              <div class="flex justify-center mx-6">
-                <button class="border border-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
+              <div class="flex justify-center lg:mx-6 my-6 mx-0 lg:my-0">
+                <button class="w-1/2 lg:w-auto scale-125 lg:scale-100 border border-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
                   <div class="text-3xl me-3">
                     <FaGooglePlay />
                   </div>
@@ -52,7 +52,7 @@ export default function Home() {
               </div>
 
               <div class="flex justify-center">
-                <button class="border border-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
+                <button class="w-1/2 lg:w-auto scale-125 lg:scale-100 border border-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
                   <div class="text-3xl me-3">
                     <SiHuawei />
                   </div>
@@ -65,11 +65,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div class="p-6 flex justify-end">
-            <img class="p-4 w-10/12" alt="hero" src="/hero.webp" />
+          <div class="p-6 flex justify-center lg:justify-end">
+            <img class="lg:p-4 w-10/12" alt="hero" src="/hero.webp" />
           </div>
         </div>
-        <div class="flex justify-center">
+        <div class="lg:flex justify-center hidden">
           <img class="w-6" src="/down.webp" alt="down" />
         </div>
       </section>
@@ -78,11 +78,12 @@ export default function Home() {
         <button class="bg-myorange_fade text-myorange rounded-full px-6 p-2 mb-4">
           Features
         </button>
-        <h2 class="sm:text-2xl md:text-3xl xl:text-4xl mb-4 font-bold [&&]:leading-tight">
+        <h2 class="text-3xl xl:text-4xl mb-4 font-bold [&&]:leading-tight">
           Let&apos;s see how it <span className="text-mypurple">works</span>
         </h2>
-        <div class="grid grid-cols-3">
-          <div class="">
+        <div class="grid lg:grid-cols-3">
+
+          <div class="mb-4">
             <div class="flex-hz max-h-60">
               <img
                 src="./delivery.webp"
@@ -103,7 +104,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div class="">
+          <div class="mb-6">
             <div class="flex-hz max-h-60">
               <img
                 src="./transport.webp"
@@ -127,7 +128,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div class="">
+          <div class="mb-4">
             <div class="flex-hz max-h-60">
               <img
                 src="./become-partner.webp"
@@ -148,18 +149,19 @@ export default function Home() {
               </span>
             </a>
           </div>
+
         </div>
       </section>
 
       <section className="mb-16">
-        <div class="grid grid-cols-2 gap-4 mx-12">
+        <div class="grid lg:grid-cols-2 gap-4 mx-6 lg:mx-12">
           <div>
-            <h2 className="sm:text-2xl md:text-3xl xl:text-4xl mb-4 font-bold [&&]:leading-tight">
-              We deliver our products <br /> with{" "}
+            <h2 className="text-3xl xl:text-4xl mb-4 font-bold [&&]:leading-tight">
+              We deliver our products <br className="hidden lg:block" /> with{" "}
               <span class="text-mypurple">lightning-fast</span> speed
             </h2>
             <div class="text-gray-500 mt-3 mb-5">
-              Get all your needs with fast delivery from food, <br /> groceries
+              Get all your needs with fast delivery from food, groceries
               pharmacy items, flowers, and more.
             </div>
             <div class="flex mb-4">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import "../../globals.css";
+import "../globals.css";
 import Nav from "../header-seller";
 import Footer from "../footer";
 import { initAccordions } from "flowbite";
@@ -13,7 +13,7 @@ export default function Customer_faq() {
   });
 
   return (
-    <div>
+    <div dir="rtl">
       <Nav />
 
       <div class="md:w-9/12 mx-auto mt-12">
@@ -85,7 +85,7 @@ export default function Customer_faq() {
                 <h2 id="accordion-collapse-heading-3">
                   <button
                     type="button"
-                    class="flex text-left w-full p-5 font-medium !bg-gray-100 text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
+                    class="flex text-right w-full p-5 font-medium !bg-gray-100 text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
                     data-accordion-target="#accordion-collapse-body-3"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-3"

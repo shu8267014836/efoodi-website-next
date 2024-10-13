@@ -31,7 +31,7 @@ export default function Footer() {
 
           <div className="lg:flex">
             <div class="flex justify-center">
-              <button class="text-white bg-gray-800 py-3 px-6 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
+              <button class="w-1/2 lg:w-auto text-white bg-gray-800 py-3 px-6 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
                 <div class="text-3xl me-3">
                   <FaApple />
                 </div>
@@ -43,8 +43,8 @@ export default function Footer() {
               </button>
             </div>
 
-            <div class="flex justify-center mx-6 my-4 lg:my-0">
-              <button class="text-white bg-gray-800 py-3 px-6 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
+            <div class="flex justify-center lg:mx-6 mx-0 my-4 lg:my-0">
+              <button class="w-1/2 lg:w-auto text-white bg-gray-800 py-3 px-6 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
                 <div class="text-3xl me-3">
                   <FaGooglePlay />
                 </div>
@@ -57,7 +57,7 @@ export default function Footer() {
             </div>
 
             <div class="flex justify-center">
-              <button class="text-white bg-gray-800 py-3 px-6 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
+              <button class="w-1/2 lg:w-auto text-white bg-gray-800 py-3 px-6 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
                 <div class="text-3xl me-3">
                   <SiHuawei />
                 </div>
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div class="mx-auto max-w-screen-xl space-y-8 px-4 pt-16 sm:px-6 lg:space-y-16 lg:px-8">
+      <div class="mx-6 lg:mx-0 max-w-screen-xl space-y-8 pt-16 lg:space-y-16 lg:px-12">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <button class="bg-myorange_fade text-myorange rounded-full px-6 p-2 mb-4 text-xs">
