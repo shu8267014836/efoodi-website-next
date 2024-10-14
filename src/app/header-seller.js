@@ -1,15 +1,98 @@
+"use client";
+
+import React, {useState} from 'react';
 import Link from "next/link";
+import { MdMenu } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
 export default function Header_seller() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => {     // this handler is "regular"
+    setMenuOpen(!menuOpen);    // open and close...
+  };
   return (
-      <nav class="m-auto pt-8 mb-8">
-        <div class="md:w-9/12 bg-white flex flex-wrap items-center justify-between mx-auto shadow-2xl p-4 px-10 rounded-full">
+      <nav class="m-auto lg:pt-8 mb-8">
+        <div class="md:w-9/12 bg-white flex flex-wrap items-center justify-between mx-auto p-4 px-10 lg:rounded-full">
+          
           <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
               <img src="/logo.png" class="h-8" alt="Flowbite Logo" />
           </a>
-          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+
+          <div class=" hidden lg:block md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button type="button" class="text-gray-600 border border-gray-500 text-sm font-bold px-6 py-2 rounded-full">تسجيل الدخول</button>
           </div>
+
+          <button 
+          data-drawer-target="default-sidebar" 
+          data-drawer-toggle="default-sidebar"
+          type="button" 
+          class="order-3 inline-flex items-center z-50 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" 
+          aria-controls="default-sidebar" 
+          aria-expanded="false"
+          onClick={toggleMenu}
+          >
+            {menuOpen ? 
+              (<RxCross2 className='text-3xl' />) : 
+              (<MdMenu className='text-3xl' />)
+            }
+            
+        </button>
+
+          {
+            menuOpen && (
+              <aside id="default-sidebar" class="fixed top-0 left-0 z-40 h-screen w-full transition-transform sm:translate-x-0" aria-label="Sidebar">
+                <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 md:order-1" id="navbar-cta">
+                  <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                      <Link
+                        href={"/sell"}
+                        class="block p-3 font-semibold text-mypurple"
+                        aria-current="page"
+                      >
+                        بيع المنتجات معنا
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={"/advertise"}
+                        class="block p-3 font-semibold md:hover:primay"
+                      >
+                        الإعلان معنا
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={"/support"}
+                        class="block p-3 font-semibold md:hover:primay"
+                      >
+                        دعم البائع
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={"/business_faq"}
+                        class="block p-3 font-semibold md:hover:primay"
+                      >
+                        لأسئلة الشائعة
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={"/"}>
+                        <button
+                          type="button"
+                          class="border border-gray-500 font-bold px-6 py-2 mt-3 rounded-full"
+                        >
+                          تسجيل الدخول
+                        </button>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+            )
+          }
+
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
             <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>

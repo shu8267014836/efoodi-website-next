@@ -1,16 +1,27 @@
+"use client";
+
+import React, {useState} from 'react';
 import Link from "next/link";
+import { MdMenu } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
 export default function Header_main() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => {     // this handler is "regular"
+    setMenuOpen(!menuOpen);    // open and close...
+};
+
   return (
-    <nav class="bg-white m-auto pt-8 mb-8">
-      <div class="md:w-11/12 bg-white flex flex-wrap items-center justify-between mx-auto shadow-2xl p-4 px-10 rounded-full">
+    <nav class=" m-auto pt-8 mb-8">
+      <div class="md:w-11/12 flex flex-wrap items-center justify-between mx-auto lg:shadow-2xl p-4 px-10 rounded-full">
         <Link
           href={"/eng/"}
-          class="flex items-center space-x-3 rtl:space-x-reverse"
+          class="flex items-center space-x-3 rtl:space-x-reverse order-2 lg:order-1"
         >
           <img src="/logo.png" class="h-8" alt="Logo" />
         </Link>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <div class="flex order-1 lg:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <Link href={"/"}>
             <button
               type="button"
@@ -20,16 +31,70 @@ export default function Header_main() {
             </button>
           </Link>
         </div>
-        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
+
+        <button 
+          data-drawer-target="default-sidebar" 
+          data-drawer-toggle="default-sidebar"
+          type="button" 
+          class="order-3 inline-flex items-center z-50 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" 
+          aria-controls="default-sidebar" 
+          aria-expanded="false"
+          onClick={toggleMenu}
+          >
+            {menuOpen ? 
+              (<RxCross2 className='text-3xl' />) : 
+              (<MdMenu className='text-3xl' />)
+            }
+            
         </button>
-        <div
-          class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
-          id="navbar-default"
-        >
+        {
+          menuOpen && (
+            <aside id="default-sidebar" class="fixed top-0 left-0 z-40 h-screen w-full transition-transform sm:translate-x-0" aria-label="Sidebar">
+              <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800" id="default-sidebar">
+                <ul class="flex flex-col font-medium p-4 mt-16 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                  <li>
+                    <Link
+                      href={"/eng/"}
+                      class="block p-3 font-semibold text-mypurple"
+                      aria-current="page"
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"/eng/sell"}
+                      class="block p-3 font-semibold text-mypurple"
+                      aria-current="page"
+                    >
+                      Business
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"/eng/"}
+                      class="block p-3 font-semibold text-mypurple"
+                      aria-current="page"
+                    >
+                      Ride with us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"/eng/contact"}
+                      class="block p-3 font-semibold text-mypurple"
+                      aria-current="page"
+                    >
+                      Contact us
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          )
+        }
+
+        <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-default">
           <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <Link
@@ -69,6 +134,7 @@ export default function Header_main() {
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
   );
