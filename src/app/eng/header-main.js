@@ -2,11 +2,13 @@
 
 import React, {useState} from 'react';
 import Link from "next/link";
+// import { useRouter } from 'next/navigation';
+import { NavLink } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 
 export default function Header_main() {
-
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => {     // this handler is "regular"
     setMenuOpen(!menuOpen);    // open and close...
@@ -25,7 +27,7 @@ export default function Header_main() {
           <Link href={"/"}>
             <button
               type="button"
-              class="text-white text-sm bg-myorange px-6 py-2 rounded-full"
+              class="text-white text-sm bg-myorange px-10 py-2 rounded-full"
             >
               عربي
             </button>
@@ -65,7 +67,6 @@ export default function Header_main() {
                     <Link
                       href={"/eng/sell"}
                       class="block p-3 font-semibold text-mypurple"
-                      aria-current="page"
                     >
                       Business
                     </Link>
@@ -74,7 +75,6 @@ export default function Header_main() {
                     <Link
                       href={"/eng/"}
                       class="block p-3 font-semibold text-mypurple"
-                      aria-current="page"
                     >
                       Ride with us
                     </Link>
@@ -83,7 +83,6 @@ export default function Header_main() {
                     <Link
                       href={"/eng/contact"}
                       class="block p-3 font-semibold text-mypurple"
-                      aria-current="page"
                     >
                       Contact us
                     </Link>
@@ -98,8 +97,8 @@ export default function Header_main() {
           <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <Link
-                href={"/eng/"}
-                class="block me-3 px-3 md:p-0 text-sm text-mypurple"
+                href={'/eng/'}
+                class="nav-items"
                 aria-current="page"
               >
                 Home
@@ -108,8 +107,7 @@ export default function Header_main() {
             <li>
               <Link
                 href={"/eng/sell"}
-                class="block me-3 px-3 md:p-0 text-sm text-mypurple"
-                aria-current="page"
+                class="nav-items"
               >
                 Business
               </Link>
@@ -117,8 +115,7 @@ export default function Header_main() {
             <li>
               <Link
                 href={"/eng/"}
-                class="block me-3 px-3 md:p-0 text-sm text-mypurple"
-                aria-current="page"
+                class="nav-items"
               >
                 Ride with us
               </Link>
@@ -126,8 +123,7 @@ export default function Header_main() {
             <li>
               <Link
                 href={"/eng/contact"}
-                class="block me-3 px-3 md:p-0 text-sm text-mypurple"
-                aria-current="page"
+                class="nav-items"
               >
                 Contact us
               </Link>

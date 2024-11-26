@@ -1,10 +1,26 @@
+"use client";
+
 import "./globals.css";
 import Nav from "./header-main";
 import Footer from "./footer";
+import Link from "next/link";
 import { FaApple, FaGooglePlay, FaCircleArrowRight } from "react-icons/fa6";
 import { SiHuawei } from "react-icons/si";
 
 export default function Home() {
+
+  const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
+
+  const scrollDown = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 700, behavior: 'smooth' });
+  };
+
+  const getApp = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 2000, behavior: 'smooth' });
+  };
+
   return (
     <div class="max-w-full lg:w-10/12" dir="rtl">
       <Nav />
@@ -18,32 +34,32 @@ export default function Home() {
             <br />منزلك او الاستلام من المطعم</div>
             
             <div class="my-3 text-xl leading-relaxed text-gray-500 lg:text-right text-center mb-4">حمل التطبيق</div>
-            <div className="lg:flex">
-              <div class="flex justify-center">
-                <button class="w-1/2 lg:w-auto scale-125 lg:scale-100 text-white bg-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center"> 
-                  <div class="text-3xl me-3"><FaApple /></div>
+            <div className="flex">
+              <div class="flex justify-center w-1/3 lg:w-auto">
+                <button class="appbtn"> 
+                  <div class="text-2xl me-1 lg:me-3"><FaApple /></div>
                   <div>
-                    <span class="text-gray-300 text-xs">Download on the</span><br/>
+                    <span class="text-gray-400 text-xs">Download on</span><br/>
                     <span class="text-start">App Store</span>
                   </div>
                 </button>
               </div>
 
-              <div class="flex justify-center lg:mx-6 my-6 mx-0 lg:my-0">
-                <button class="w-1/2 lg:w-auto scale-125 lg:scale-100 border border-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center"> 
-                  <div class="text-3xl me-3"><FaGooglePlay /></div>
+              <div class="flex justify-center w-1/3 lg:w-auto lg:mx-6 lg:my-0">
+                <button class="appbtn"> 
+                  <div class="text-2xl me-1 lg:me-3"><FaGooglePlay /></div>
                   <div>
-                    <span class=" text-xs">Download on the</span><br/>
+                    <span class="text-gray-400 text-xs">Download on</span><br/>
                     <span class="text-start">Google Play</span>
                   </div>
                 </button>
               </div>
 
-              <div class="flex justify-center">
-                <button class="w-1/2 lg:w-auto scale-125 lg:scale-100 border border-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center"> 
-                  <div class="text-3xl me-3"><SiHuawei /></div>
+              <div class="flex justify-center w-1/3 lg:w-auto">
+                <button class="appbtn"> 
+                  <div class="text-2xl me-1 lg:me-3"><SiHuawei /></div>
                   <div>
-                    <span class=" text-xs">Download on the</span><br/>
+                    <span class="text-gray-400 text-xs">Download on</span><br/>
                     <span class="text-start">App Gallery</span>
                   </div>
                 </button>
@@ -51,14 +67,18 @@ export default function Home() {
             </div>
 
           </div>
-          <div class="p-6 flex justify-center lg:justify-end">
-            <img class="scale-x-reverse lg:p-4 w-10/12" alt="hero" src="/hero.webp" />
+          <div class="p-6 flex justify-center lg:w-auto lg:justify-end">
+            <img class="home-rider-ar lg:p-4 w-10/12" alt="hero" src="/hero-ar.webp" />
           </div>
         </div>
-        <div class="lg:flex justify-center hidden"><img class="w-6" src="/down.webp" alt="down" /></div>
+
+        <button class="lg:flex justify-center hidden m-auto" onClick={scrollDown}>
+          <img class="w-6" src="/down.webp" alt="down" />
+        </button>
+
       </section>
 
-      <section class="bg-cyan-50 text-center rounded-2xl p-12 mb-16">
+      <section class="bg-bgcolor text-center rounded-2xl p-12 mb-16">
         <button class="bg-myorange_fade text-myorange rounded-full px-6 p-2 mb-4">المميزات</button>
         <h2 class="text-3xl xl:text-4xl mb-4 font-bold [&&]:leading-tight">الية عمل التطبيق</h2>
         <div class="grid lg:grid-cols-3">
@@ -67,10 +87,10 @@ export default function Home() {
             <h6 className="font-bold">احصل على أفضل تجربة</h6>
             <div class="text-gray-500 text-sm my-3">جرب أفضل ما يقدم من حولك كلهم في تطبيق واحد
             <br />تطبيق واحد</div>
-            <a href="" class="flex justify-center text-myorange">
+            <Link href={"/comingsoon"} class="flex justify-center text-myorange">
               <span className="text-sm font-bold">ابدأ بكسب المال</span>
               <span className="mt-1 mr-3"><FaCircleArrowRight className="scale-x-reverse" /></span>
-            </a>
+            </Link>
           </div>
 
           <div class="mb-6">
@@ -78,20 +98,20 @@ export default function Home() {
             <h6 className="font-bold">كن شريكنا</h6>
             <div class="text-gray-500 text-sm my-3">طور عملك وتواصل مع عملاء جدد <br />
             بالشراكة معنا.</div>
-            <a href="" class="flex justify-center text-myorange">
+            <Link href={"/sell"} class="flex justify-center text-myorange">
               <span className="text-sm font-bold">سجل في فودي</span>
               <span className="mt-1 mr-3"><FaCircleArrowRight className="scale-x-reverse" /></span>
-            </a>
+            </Link>
           </div>
 
           <div class="mb-4">
             <div class="flex-hz max-h-60"><img src="./become-partner.webp" alt="image" className="object-contain scale-x-reverse"/></div>
             <h6 className="font-bold">انضم الينا كمندوب توصيل</h6>
             <div class="text-gray-500 text-sm my-3">سجل في دقائق كمندوب توصيل حسب<br />وقتك المتاح</div>
-            <a href="" class="flex justify-center text-myorange">
+            <button href="" class="flex m-auto justify-center text-myorange" onClick={getApp}>
               <span className="text-sm font-bold">احصل على التطبيق الان</span> 
               <span className="mt-1 mr-3"><FaCircleArrowRight className="scale-x-reverse" /></span>
-            </a>
+            </button>
           </div>
         </div>
       </section>

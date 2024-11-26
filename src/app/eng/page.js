@@ -1,10 +1,26 @@
+"use client";
+
 import "../globals.css";
 import Nav from "./header-main";
 import Footer from "./footer";
+import Link from "next/link";
 import { FaApple, FaGooglePlay, FaCircleArrowRight } from "react-icons/fa6";
 import { SiHuawei } from "react-icons/si";
 
 export default function Home() {
+
+  const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
+
+  const scrollDown = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 700, behavior: 'smooth' });
+  };
+
+  const getApp = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 2000, behavior: 'smooth' });
+  };
+
   return (
     <div class="max-w-full lg:w-10/12">
       <Nav />
@@ -24,40 +40,40 @@ export default function Home() {
             <div class="my-4 text-xl leading-relaxed text-gray-500 text-center lg:text-left">
               Apps available to download on
             </div>
-            <div className="lg:flex">
-              <div class="flex justify-center">
-                <button class="w-1/2 lg:w-auto scale-125 lg:scale-100 text-white bg-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
-                  <div class="text-3xl me-3">
+            <div className="flex">
+              <div class="flex justify-center w-1/3 lg:w-auto">
+                <button class="appbtn">
+                  <div class="text-2xl me-1 lg:me-3">
                     <FaApple />
                   </div>
                   <div>
-                    <span class="text-gray-300 text-xs">Download on the</span>
+                    <span class="text-gray-400 text-xs">Download on</span>
                     <br />
                     <span class="text-start">App Store</span>
                   </div>
                 </button>
               </div>
 
-              <div class="flex justify-center lg:mx-6 my-6 mx-0 lg:my-0">
-                <button class="w-1/2 lg:w-auto scale-125 lg:scale-100 border border-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
-                  <div class="text-3xl me-3">
+              <div class="flex justify-center w-1/3 lg:w-auto lg:mx-6 lg:my-0">
+                <button class="appbtn">
+                  <div class="text-2xl me-1 lg:me-3">
                     <FaGooglePlay />
                   </div>
                   <div>
-                    <span class=" text-xs">Download on the</span>
+                    <span class="text-gray-400 text-xs">Download on</span>
                     <br />
                     <span class="text-start">Google Play</span>
                   </div>
                 </button>
               </div>
 
-              <div class="flex justify-center">
-                <button class="w-1/2 lg:w-auto scale-125 lg:scale-100 border border-black py-2 px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center">
-                  <div class="text-3xl me-3">
+              <div class="flex justify-center w-1/3 lg:w-auto">
+                <button class="appbtn">
+                  <div class="text-2xl me-1 lg:me-3">
                     <SiHuawei />
                   </div>
                   <div>
-                    <span class=" text-xs">Download on the</span>
+                    <span class="text-gray-400 text-xs">Download on</span>
                     <br />
                     <span class="text-start">App Gallery</span>
                   </div>
@@ -66,15 +82,15 @@ export default function Home() {
             </div>
           </div>
           <div class="p-6 flex justify-center lg:justify-end">
-            <img class="lg:p-4 w-10/12" alt="hero" src="/hero.webp" />
+            <img class="lg:p-4 w-10/12 home-rider-eng" alt="hero" src="/hero.webp" />
           </div>
         </div>
-        <div class="lg:flex justify-center hidden">
-          <img class="w-6" src="/down.webp" alt="down" />
-        </div>
+        <button class="lg:flex justify-center hidden m-auto" onClick={scrollDown}>
+          <img class="w-6" src="/down.webp" alt="down"/>
+        </button>
       </section>
 
-      <section class="bg-cyan-50 text-center rounded-2xl p-12 mb-16">
+      <section class="bg-bgcolor text-center rounded-2xl p-12 mb-16" >
         <button class="bg-myorange_fade text-myorange rounded-full px-6 p-2 mb-4">
           Features
         </button>
@@ -96,12 +112,12 @@ export default function Home() {
               As a delivery driver, make money and work <br /> on your shedule.
               Signup in minutes.
             </div>
-            <a href="" class="flex justify-center text-myorange">
+            <Link href={"/eng/comingsoon"} class="flex justify-center text-myorange">
               <span className="text-sm font-bold">Start Earning </span>
               <span className="mt-1 ml-3">
                 <FaCircleArrowRight />
               </span>
-            </a>
+            </Link>
           </div>
 
           <div class="mb-6">
@@ -117,7 +133,7 @@ export default function Home() {
               Grow your business and reach new <br /> customers by partnering
               with us.
             </div>
-            <a href="" class="flex justify-center text-myorange">
+            <Link href={"/eng/sell"} class="flex justify-center text-myorange">
               <span className="text-sm font-bold">
                 {" "}
                 Signup for your eFoodi{" "}
@@ -125,7 +141,7 @@ export default function Home() {
               <span className="mt-1 ml-3">
                 <FaCircleArrowRight />
               </span>
-            </a>
+            </Link>
           </div>
 
           <div class="mb-4">
@@ -142,12 +158,12 @@ export default function Home() {
               <br />
               has to offer, all in one app.
             </div>
-            <a href="" class="flex justify-center text-myorange">
+            <button href="" class="flex m-auto justify-center text-myorange" onClick={getApp}>
               <span className="text-sm font-bold">Get the app</span>
               <span className="mt-1 ml-3">
                 <FaCircleArrowRight />
               </span>
-            </a>
+            </button>
           </div>
 
         </div>

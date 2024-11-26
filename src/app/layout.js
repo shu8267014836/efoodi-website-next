@@ -1,14 +1,11 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-
+import "@fontsource/dm-sans";
 import Script from 'next/script';
 
 <Script
   src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"
   strategy="beforeInteractive"
 />
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "eFooDi",
@@ -18,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body >{children}</body>
     </html>
   );
 }

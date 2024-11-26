@@ -19,7 +19,10 @@ module.exports = {
       colors:{
         mypurple: '#52057A',
         myorange: '#FAAF40',
+        mygreen: '#7ec68f',
         myorange_fade: '#F2EEDE',
+        bgcolor : '#f2fbfc',
+        bggray: '#f0f1f1',
       }
     },
   },

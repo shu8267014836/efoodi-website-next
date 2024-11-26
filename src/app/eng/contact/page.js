@@ -1,14 +1,14 @@
 import "../../globals.css";
-import Nav from "../header-seller";
+import Nav from "../header-main";
 import Footer from "../footer";
 
 export default function Contact() {
   return (
-    <div>
+    <div className="max-w-full lg:w-10/12">
 
       <Nav />
       
-      <div class="md:w-9/12 mx-auto mt-4">
+      <div class="mx-auto mt-4">
         <section className="mb-16 md:px-12">
           <div className=" p-6">
 

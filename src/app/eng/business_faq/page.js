@@ -5,7 +5,7 @@ import "../../globals.css";
 import Nav from "../header-seller";
 import Footer from "../footer";
 import { initAccordions } from "flowbite";
-import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleDown, FaCircle } from "react-icons/fa6";
 
 export default function Business_faq() {
   useEffect(() => {
@@ -16,26 +16,30 @@ export default function Business_faq() {
     <div>
       <Nav />
 
-      <div class="md:w-9/12 mx-auto mt-12">
+      <div class="lg:w-10/12 mx-auto mt-12">
         <div className="mx-4">
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="mb-6 text-gray-500">
             Find the most frequently asked questions.
           </div>
 
-          <div className="py-6">
+          <div className="py-6 relative">
+            <FaCircle className="text-myorange text-4xl absolute" style={{bottom: '-1rem', right:'-1rem'}} />
+            <FaCircle className="text-myorange text-lg absolute" style={{bottom: '-3rem', right:'-3rem'}} />
+            
             <div id="accordion-collapse" data-accordion="collapse">
-              <div className="mb-4">
+
+              <div className="mb-3">
                 <h2 id="accordion-collapse-heading-1">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium !bg-gray-100 text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
+                    class="flex items-center font-bold justify-between w-full p-5 bg-bggray text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
                     data-accordion-target="#accordion-collapse-body-1"
                     aria-expanded="true"
                     aria-controls="accordion-collapse-body-1"
                   >
                     <span>What is eFOODi?</span>
-                    <FaAngleDown className="text-myorange text-2xl" />
+                    <FaAngleDown className="text-myorange text-4xl" />
                   </button>
                 </h2>
                 <div
@@ -53,17 +57,17 @@ export default function Business_faq() {
                 </div>
               </div>
 
-              <div className="mb-4">
+              <div className="mb-3">
                 <h2 id="accordion-collapse-heading-2">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium !bg-gray-100 text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
+                    class="flex items-center justify-between w-full p-5 bg-bggray font-bold text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
                     data-accordion-target="#accordion-collapse-body-2"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-2"
                   >
                     <span>What does eFOODi do?</span>
-                    <FaAngleDown className="text-myorange text-2xl" />
+                    <FaAngleDown className="text-myorange text-4xl" />
                   </button>
                 </h2>
                 <div
@@ -81,17 +85,17 @@ export default function Business_faq() {
                 </div>
               </div>
 
-              <div className="mb-4">
+              <div className="mb-3">
                 <h2 id="accordion-collapse-heading-3">
                   <button
                     type="button"
-                    class="flex text-left w-full p-5 font-medium !bg-gray-100 text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
+                    class="flex items-center justify-between w-full p-5 bg-bggray font-bold text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
                     data-accordion-target="#accordion-collapse-body-3"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-3"
                   >
                     <span>How much will it cost me to use eFOODi services?</span>
-                    <FaAngleDown className="text-myorange text-2xl" />
+                    <FaAngleDown className="text-myorange text-4xl" />
                   </button>
                 </h2>
                 <div
@@ -111,17 +115,17 @@ export default function Business_faq() {
                 </div>
               </div>
 
-              <div className="mb-4">
+              <div className="mb-3">
                 <h2 id="accordion-collapse-heading-4">
                   <button
                     type="button"
-                    class="flex items-center justify-between w-full p-5 font-medium !bg-gray-100 text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
+                    class="flex items-center justify-between w-full p-5 bg-bggray font-bold text-gray-500 border border-gray-200 rounded-xl focus:ring-4 focus:ring-gray-200 gap-3"
                     data-accordion-target="#accordion-collapse-body-4"
                     aria-expanded="false"
                     aria-controls="accordion-collapse-body-4"
                   >
                     <span>Why should I use eFOODi on phone?</span>
-                    <FaAngleDown className="text-myorange text-2xl" />
+                    <FaAngleDown className="text-myorange text-4xl" />
                   </button>
                 </h2>
                 <div
@@ -146,9 +150,10 @@ export default function Business_faq() {
             </div>
           </div>
         </div>
+      <Footer />
+
       </div>
 
-      <Footer />
     </div>
   );
 }

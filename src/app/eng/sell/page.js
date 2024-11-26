@@ -2,28 +2,34 @@ import "../../globals.css";
 import Nav from "../header-seller";
 import Footer from "../footer";
 import Form1 from "../form1";
+import { FaCircle } from "react-icons/fa";
 
 export default function Sell() {
   return (
     <div>
-      <div class="bg-[url('/hero-image.webp')] h-screen">
-        <Nav />
+      <div class="bg-[url('/hero-image.webp')] h-screen bg-cover relative z-0">
+        <div style={{background : '#52057a', opacity: 0.8, height: '100%'}}></div>
+        <div className="absolute z-1 h-full w-full top-0">
+          <Nav />
 
-        <section class="flex-center h-full px-3">
-          <div className="md:w-1/2 text-white text-center -mt-28">
-            <div className="flex justify-center mb-8"><img class="w-1/2" src="/logo-white.webp" alt="logo" /></div>
-            <h1 className="text-3xl lg:text-4xl font-bold">Sell online with eFOODi</h1>
-            <p className="text-gray-300 text-xl lg:text-2xl my-3 pb-8 px-6 lg:px-0">Become a eFOODi seller and sell to millions of customers.</p>
-            <button className="bg-myorange text-sm rounded-full p-3 w-1/2 lg:w-1/3 mb-4">Become a partner</button>
-          </div>
-        </section>
+          <section class="flex-center h-full px-3">
+            <div className="md:w-2/3 text-white text-center -mt-72">
+              <div className="flex justify-center"><img class="w-5/12" src="/logo-white.webp" alt="logo" /></div>
+              <h1 className="text-3xl lg:text-4xl font-bold">Sell online with eFOODi</h1>
+              <p className="text-gray-300 text-xl lg:text-2xl my-3 pb-8 px-6 lg:px-0">Become a eFOODi seller and sell to millions of customers.</p>
+              <button className="bg-myorange text-sm rounded-full p-3 w-1/2 lg:w-1/3 mb-4">Become Partner</button>
+            </div>
+          </section>
+        </div>
       </div>
 
-      <div class="lg:w-11/12 mx-auto lg:-mt-20">
-        <section className="bg-gray-100 rounded-xl grid lg:grid-cols-5 p-8 text-center mb-16">
+      <div class="lg:w-10/12 mx-auto lg:-mt-20 z-20 relative">
+        <FaCircle className="text-mygreen text-4xl absolute z-20" style={{top: '-1rem', right:'1rem'}} />
+
+        <section className="bg-gray-100 rounded-xl grid grid-cols-2 lg:grid-cols-5 p-8 text-center mb-16">
           <div className="flex-vr mb-10">
             <div className="flex-hz"><img src="/target-audience.webp" alt="image" className="w-1/3 mb-4" /></div>
-            <div className="font-bold text-lg md:text-xl lg:text-lg ">Sell to millions of eFOODi <br/> customers</div>
+            <div className="font-bold text-lg md:text-xl lg:text-lg ">Sell to millions of eFOODi customers</div>
           </div>
 
           <div className="flex-vr mb-10">
@@ -49,7 +55,8 @@ export default function Sell() {
 
         <section className="mb-16">
           <h1 className="text-3xl lg:text-5xl font-bold text-center mb-10">Start your <span className="text-mypurple">journey</span></h1>
-          <div className="grid lg:grid-cols-2 lg:px-12">
+          <div className="grid lg:grid-cols-2 lg:px-12 relative">
+            <FaCircle className="text-mygreen text-xs absolute" style={{top: '-3rem', left:'1rem'}} />
             <div className="px-6 mb-4">
               <h2 className="text-2xl font-bold mb-4">Begin your journey with endless achievements with eFOODi!</h2>
               <div className="mb-6 text-gray-500">Partner with us to streamline your business, reach more customers, boost your sales, and thrive in online world - your journey to success starts.</div>
@@ -79,41 +86,45 @@ export default function Sell() {
               </div>
             </div>
 
-            <div className="bg-gray-200 rounded-xl p-6">
+            <div className="bg-bggray rounded-xl p-6 relative">
               <h2 className="text-2xl font-bold mb-5 text-center">Ready to accelerate your <br /> business growth?</h2>
+              <FaCircle className="text-mygreen text-lg absolute" style={{top: '3rem', right:'-2rem'}} />
+              <FaCircle className="text-myorange text-4xl absolute" style={{bottom: '1rem', left:'-1.5rem'}} />
+              <FaCircle className="text-myorange text-xl absolute" style={{bottom: '-2rem', right:'0.5rem'}} />
               <Form1 />
             </div>
           </div>
         </section>
 
-        <section className="bg-cyan-50 rounded-xl p-8 text-center mb-16 py-14">
+        <section className="bg-bgcolor rounded-xl p-4 lg:p-8 text-center mb-16 py-14 relative">
+          <FaCircle className="text-myorange text-4xl absolute" style={{bottom: '-1rem', right:'2rem'}} />
           <h1 className="text-3xl lg:text-5xl font-bold text-center mb-14">Your <span className="text-mypurple"> Journey</span> on eFOODi</h1>
-          <div className="grid lg:grid-cols-5">
-            <div className="flex-vr px-6 mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-5">
+            <div className="flex-vr px-1 lg:px-6 mb-8">
               <div className="flex-hz"><img src="/tracking.webp" alt="image" className="w-2/3" /></div>
               <div className="text-2xl font-bold my-3">Create</div>
               <div className="text-gray-500 text-lg md:text-xl lg:text-sm">Register in just 10 mins with valid CR, tax, address, & bank details.</div>
             </div>
 
-            <div className="flex-vr px-6 mb-8">
+            <div className="flex-vr px-1 lg:px-6 mb-8">
               <div className="flex-hz"><img src="/talk.webp" alt="image" className="w-2/3" /></div>
               <div className="text-2xl font-bold my-3">List</div>
               <div className="text-gray-500 text-lg md:text-xl lg:text-sm">List your products (min 1no.) that you want to sell on eFOODi.</div>
             </div>
 
-            <div className="flex-vr px-6 mb-8">
+            <div className="flex-vr px-1 lg:px-6 mb-8">
               <div className="flex-hz"><img src="/boys.webp" alt="image" className="w-2/3" /></div>
               <div className="text-2xl font-bold my-3">Orders</div>
               <div className="text-gray-500 text-lg md:text-xl lg:text-sm">Receive orders from over millions of eFOODi customers.</div>
             </div>
 
-            <div className="flex-vr px-6 mb-8">
+            <div className="flex-vr px-1 lg:px-6 mb-8">
               <div className="flex-hz"><img src="/warehouse.webp" alt="image" className="w-2/3" /></div>
               <div className="text-2xl font-bold my-3">Shipment</div>
               <div className="text-gray-500 text-lg md:text-xl lg:text-sm">eFOODi ensures stress free delivery of your products.</div>
             </div>
 
-            <div className="flex-vr px-6 mb-8">
+            <div className="flex-vr px-1 lg:px-6 mb-8">
               <div className="flex-hz"><img src="/cod.webp" alt="image" className="w-2/3" /></div>
               <div className="text-2xl font-bold my-3">Payment</div>
               <div className="text-gray-500 text-lg md:text-xl lg:text-sm">Receive payment same from the date of dispatch of your order.</div>
