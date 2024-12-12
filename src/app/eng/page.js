@@ -102,9 +102,9 @@ export default function Home() {
           <div class="mb-4">
             <div class="flex-hz max-h-60">
               <img
-                src="./delivery.webp"
+                src="./delivery-e.webp"
                 alt="image"
-                className="scale-x-reverse object-contain"
+                className="object-contain"
               />
             </div>
             <h6 className="font-bold">Become a delivery man</h6>

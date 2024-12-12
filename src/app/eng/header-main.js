@@ -73,7 +73,7 @@ export default function Header_main() {
                   </li>
                   <li>
                     <Link
-                      href={"/eng/"}
+                      href={"/eng/comingsoon"}
                       class="block p-3 font-semibold text-mypurple"
                     >
                       Ride with us
@@ -114,7 +114,7 @@ export default function Header_main() {
             </li>
             <li>
               <Link
-                href={"/eng/"}
+                href={"/eng/comingsoon"}
                 class="nav-items"
               >
                 Ride with us

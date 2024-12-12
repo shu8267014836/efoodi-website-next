@@ -23,7 +23,9 @@ export default function Privacy() {
         </section>
       </div>
 
-      <Footer />
+      <div class="lg:w-10/12 mx-auto">
+        <Footer />
+      </div>
     </div>
   );
 }

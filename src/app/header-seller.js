@@ -15,7 +15,7 @@ export default function Header_seller() {
       <nav class="m-auto lg:pt-8 mb-8">
         <div class="md:w-9/12 bg-white flex flex-wrap items-center justify-between mx-auto p-4 px-10 lg:rounded-full shadow-xl">
           
-          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
               <img src="/logo.png" class="h-8" alt="Flowbite Logo" />
           </a>
 

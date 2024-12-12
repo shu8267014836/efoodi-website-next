@@ -5,7 +5,7 @@ import "../globals.css";
 import Nav from "../header-seller";
 import Footer from "../footer";
 import { initAccordions } from "flowbite";
-import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleDown, FaCircle } from "react-icons/fa6";
 
 export default function Customer_faq() {
   useEffect(() => {
@@ -89,7 +89,9 @@ export default function Customer_faq() {
         </div>
       </div>
 
-      <Footer />
+      <div class="lg:w-10/12 mx-auto">
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import "../globals.css";
 import Nav from "../header-seller";
 import Footer from "../footer";
@@ -5,6 +7,14 @@ import Form1 from "../form1";
 import { FaCircle } from "react-icons/fa";
 
 export default function Advertise() {
+
+  const isBrowser = () => typeof window !== 'undefined';
+
+  const scrollDown = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 620, behavior: 'smooth' });
+  };
+
   return (
     <div dir="rtl">
 
@@ -16,10 +26,10 @@ export default function Advertise() {
             <FaCircle className="text-mypurple text-xl absolute" style={{bottom: '7rem', right:'1rem'}} />
             <h2 className="text-3xl font-bold mb-4">أعلن على فودي</h2>
             <div className="mb-12 text-xl text-gray-500">على كل اعلان تسويقي تنفقه، تطبيق فودي يرده لك 8 اضعاف كاستثمار</div>
-            <button type="submit" class="text-white bg-myorange font-medium rounded-full text-sm py-2.5 text-center w-9/12">طور اعمالك</button>
+            <button type="submit" class="text-white bg-myorange font-medium rounded-full text-sm py-2.5 text-center w-9/12" onClick={scrollDown}>طور اعمالك</button>
           </div>
           <div className="p-10 px-16 order-1 lg:order-2 relative">
-            <img class="scale-x-reverse " alt="image" src="/advertise.webp" />
+            <img class=" " alt="image" src="/advertise-ar.webp" />
             <FaCircle className="text-myorange text-4xl absolute" style={{top: '1rem', right:'4rem'}} />
             <FaCircle className="text-mygreen text-3xl absolute" style={{top: '4rem', left:'3rem'}} />
             <FaCircle className="text-mygreen text-xs absolute" style={{top: '14rem', left:'1rem'}} />

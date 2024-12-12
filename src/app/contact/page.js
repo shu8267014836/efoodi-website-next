@@ -15,7 +15,7 @@ export default function Contact() {
             <h2 className="text-2xl font-bold mb-3">تواصل معنا</h2>
             <div className="mb-6 text-gray-500">يسرنا ان نسمع من عملائنا</div>
 
-            <div className="px-12 mb-4"><img class="sm:block lg:hidden" alt="image" src="/contact.webp" /></div>
+            <div className="px-12 mb-4"><img class="sm:block lg:hidden" alt="image" src="/contact-ar.webp" /></div>
 
             <form class="myform">
               <div className="grid lg:grid-cols-2">
@@ -67,7 +67,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="pr-14 mr-16"><img class="hidden lg:block" alt="image" src="/contact.webp" /></div>
+                <div className="pr-14 mr-16"><img class="hidden lg:block lg:-mt-24" alt="image" src="/contact-ar.webp" /></div>
               </div>
 
               <div class="mb-6">

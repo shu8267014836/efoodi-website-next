@@ -52,7 +52,7 @@ export default function Header_main() {
                     <Link href={"/sell"} class="block p-3 font-semibold text-gray-500 md:hover:primay">الاعمال</Link>
                   </li>
                   <li>
-                    <Link href={"/"} class="block p-3 font-semibold text-gray-500 md:hover:primay">تعرف علينا </Link>
+                    <Link href={"/comingsoon"} class="block p-3 font-semibold text-gray-500 md:hover:primay">تعرف علينا </Link>
                   </li>
                   <li>
                     <Link href={"/contact"} class="block p-3 font-semibold text-gray-500 md:hover:primay">تواصل معنا</Link>
@@ -72,7 +72,7 @@ export default function Header_main() {
                 <Link href={"/sell"} class="block me-3 px-3 md:p-0 text-sm text-gray-500 md:hover:primay">الاعمال</Link>
               </li>
               <li>
-                <Link href={"/"} class="block me-3 px-3 md:p-0 text-sm text-gray-500 md:hover:primay">تعرف علينا </Link>
+                <Link href={"/comingsoon"} class="block me-3 px-3 md:p-0 text-sm text-gray-500 md:hover:primay">تعرف علينا </Link>
               </li>
               <li>
                 <Link href={"/contact"} class="block me-3 px-3 md:p-0 text-sm text-gray-500 md:hover:primay">تواصل معنا</Link>

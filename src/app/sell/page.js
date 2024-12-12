@@ -1,3 +1,5 @@
+"use client";
+
 import "../globals.css";
 import Nav from "../header-seller";
 import Footer from "../footer";
@@ -5,6 +7,14 @@ import Form1 from "../form1";
 import { FaCircle } from "react-icons/fa";
 
 export default function Sell() {
+
+  const isBrowser = () => typeof window !== 'undefined';
+
+  const scrollDown = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 920, behavior: 'smooth' });
+  };
+
   return (
     <div dir="rtl">
       <div class="bg-[url('/hero-image.webp')] h-screen bg-cover relative z-0">
@@ -17,7 +27,7 @@ export default function Sell() {
               <div className="flex justify-center"><img class="w-5/12" src="/logo-white.webp" alt="logo" /></div>
               <h1 className="text-3xl lg:text-4xl font-bold">البيع عبر الأنترنت في تطبيق فودي</h1>
               <p className="text-gray-300 text-xl lg:text-2xl my-3 pb-8 px-6 lg:px-0">سجل منتجاتك لدى تطبيق فودي وبع لملاين الزبائن</p>
-              <button className="bg-myorange text-sm rounded-full p-3 w-1/2 lg:w-1/3 mb-4">كن شريكنا</button>
+              <button className="bg-myorange text-sm rounded-full p-3 w-1/2 lg:w-1/3 mb-4" onClick={scrollDown}>كن شريكنا</button>
             </div>
           </section>
         </div>

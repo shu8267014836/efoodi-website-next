@@ -18,9 +18,9 @@ export default function Footer() {
           <div className="p-6 h-full">
             <FaCircle className="text-mygreen text-4xl absolute z-20" style={{top: '4rem', left:'-1rem'}} />
             <img
-              class="lg:-mt-28 scale-x-reverse"
+              class="lg:-mt-28 "
               alt="image"
-              src="/location.webp"
+              src="/location-e.webp"
               style={{scale: '1.2'}}
             />
           </div>

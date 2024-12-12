@@ -19,7 +19,7 @@ export default function Header_seller() {
           href={"/eng/"}
           class="flex items-center order-2 lg:order-1 space-x-3 rtl:space-x-reverse"
         >
-          <img src="/logo.png" class="h-8" alt="Flowbite Logo" />
+          <img src="/logo.png" class="h-8" alt=" Logo" />
         </Link>
 
         <button 

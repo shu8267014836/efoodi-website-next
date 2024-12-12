@@ -66,7 +66,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="pl-14 ml-16"><img class="hidden lg:block" alt="image" src="/contact.webp" /></div>
+                <div className="pl-14 ml-16"><img class="hidden lg:block lg:-mt-24" alt="image" src="/contact.webp" /></div>
               </div>
 
               <div class="mb-6">

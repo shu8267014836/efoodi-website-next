@@ -1,3 +1,5 @@
+"use client";
+
 import "../../globals.css";
 import Nav from "../header-seller";
 import Footer from "../footer";
@@ -5,6 +7,14 @@ import Form1 from "../form1";
 import { FaCircle } from "react-icons/fa";
 
 export default function Advertise() {
+
+  const isBrowser = () => typeof window !== 'undefined';
+
+  const scrollDown = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 620, behavior: 'smooth' });
+  };
+
   return (
     <div>
 
@@ -17,7 +27,7 @@ export default function Advertise() {
 
             <h2 className="text-3xl font-bold mb-4">Advertise on eFOODi!</h2>
             <div className="mb-12 text-xl text-gray-500">For every marketing you spent, eFOODi returns over 8X the investment.</div>
-            <button type="submit" class="text-white bg-myorange font-medium rounded-full text-sm py-3 text-center w-9/12">Grow Your Business</button>
+            <button type="submit" class="text-white bg-myorange font-medium rounded-full text-sm py-3 text-center w-9/12" onClick={scrollDown}>Grow Your Business</button>
           </div>
           <div className="p-10 px-16 order-1 lg:order-2 relative">
             <img class=" " alt="image" src="/advertise.webp" />

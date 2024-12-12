@@ -1,6 +1,6 @@
 import "../../globals.css";
-import Nav from "../../header-seller";
-import Footer from "../../footer";
+import Nav from "../header-seller";
+import Footer from "../footer";
 
 export default function About() {
   return (
@@ -8,7 +8,7 @@ export default function About() {
 
       <Nav />
       
-      <div class="md:w-9/12 mx-auto mt-4">
+      <div class="lg:w-9/12 mt-4 mx-auto">
         <section className="mb-16">
           <div className="p-6">
 
@@ -23,7 +23,10 @@ export default function About() {
         </section>
       </div>
 
-      <Footer />
+      <div class="lg:w-10/12 mx-auto">
+        <Footer />
+      </div>
+
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function Business_faq() {
     <div dir="rtl">
       <Nav />
       
-      <div class="lg:w-10/12 mx-auto mt-12">
+      <div class="lg:w-9/12 mx-auto mt-12">
         <div className="mx-4">
           <h2 className="text-2xl font-bold mb-4">الأسئلة الشائعة</h2>
           <div className="mb-6 text-gray-500">الأسئلة الأكثر شيوعًا.</div>
@@ -88,10 +88,12 @@ export default function Business_faq() {
 
           </div>
         </div>
-      <Footer />
 
       </div>
-
+      
+      <div class="lg:w-10/12 mx-auto">
+        <Footer />
+      </div>
     </div>
   );
 }

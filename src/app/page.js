@@ -105,7 +105,7 @@ export default function Home() {
           </div>
 
           <div class="mb-4">
-            <div class="flex-hz max-h-60"><img src="./become-partner.webp" alt="image" className="object-contain scale-x-reverse"/></div>
+            <div class="flex-hz max-h-60"><img src="./become-partner-ar.webp" alt="image" className="object-contain"/></div>
             <h6 className="font-bold">انضم الينا كمندوب توصيل</h6>
             <div class="text-gray-500 text-sm my-3">سجل في دقائق كمندوب توصيل حسب<br />وقتك المتاح</div>
             <button href="" class="flex m-auto justify-center text-myorange" onClick={getApp}>
@@ -146,7 +146,7 @@ export default function Home() {
               </div>
           </div>
 
-          <div className="px-10"><img class=" " alt="image" src="/deliver-products.webp" /></div>
+          <div className="px-10"><img class=" " alt="image" src="/deliver-products-ar.webp" /></div>
         </div>
       </section>
       
