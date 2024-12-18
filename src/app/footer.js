@@ -12,8 +12,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-32 mx-6 ">
-      <div className="grid grid-cols-1 lg:grid-cols-3 bg-bgcolor rounded-2xl p-4 lg:px-20 items-end lg:h-72 z-0 relative">
+    <footer className="mt-32 mx-4 lg:mx-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 bg-bgcolor rounded-2xl p-2 lg:p-4 lg:px-20 items-end lg:h-72 z-0 relative">
         <div className="p-6  h-full">
           <FaCircle className="text-mygreen text-4xl absolute z-20" style={{top: '4rem', right:'-1rem'}} />
           <img class="lg:-mt-28" alt="image" src="/location.webp" style={{scale: '1.2'}} />
@@ -27,30 +27,30 @@ export default function Footer() {
           <div className="flex">
             <div class="flex justify-center w-1/3 lg:w-auto">
               <button class="text-white bg-gray-800 appbtn"> 
-                <div class="text-2xl me-1 lg:me-3"><FaApple /></div>
+                <div class="text-xl lg:text-2xl me-1 lg:me-3"><FaApple /></div>
                 <div>
                   <span class="text-gray-400 text-xs">Download on</span><br/>
-                  <span class="text-start">App Store</span>
+                  <span class="text-start text-xs md:text-sm">App Store</span>
                 </div>
               </button>
             </div>
 
             <div class="flex justify-center w-1/3 lg:w-auto lg:mx-4 lg:my-0">
               <button class="text-white bg-gray-800 appbtn"> 
-                <div class="text-2xl me-1 lg:me-3"><FaGooglePlay /></div>
+                <div class="text-xl lg:text-2xl me-1 lg:me-3"><FaGooglePlay /></div>
                 <div>
                   <span class="text-gray-400 text-xs">Download on</span><br/>
-                  <span class="text-start">Google Play</span>
+                  <span class="text-start text-xs md:text-sm">Google Play</span>
                 </div>
               </button>
             </div>
 
             <div class="flex justify-center w-1/3 lg:w-auto">
               <button class="text-white bg-gray-800 appbtn"> 
-                <div class="text-2xl me-1 lg:me-3"><SiHuawei /></div>
+                <div class="text-xl lg:text-2xl me-1 lg:me-3"><SiHuawei /></div>
                 <div>
                   <span class="text-gray-400 text-xs">Download on</span><br/>
-                  <span class="text-start">App Gallery</span>
+                  <span class="text-start text-xs md:text-sm">App Gallery</span>
                 </div>
               </button>
             </div>

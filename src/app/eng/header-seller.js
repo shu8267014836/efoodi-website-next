@@ -14,7 +14,7 @@ export default function Header_seller() {
 
   return (
     <nav class="m-auto lg:pt-8 mb-8">
-      <div class="md:w-9/12 bg-white flex flex-wrap items-center justify-between mx-auto p-4 px-10 lg:rounded-full shadow-xl">
+      <div class="lg:w-9/12 bg-white flex flex-wrap items-center justify-between mx-auto p-4 px-6 lg:px-10 lg:rounded-full shadow-xl">
         <Link
           href={"/eng/"}
           class="flex items-center order-2 lg:order-1 space-x-3 rtl:space-x-reverse"
@@ -26,7 +26,7 @@ export default function Header_seller() {
           data-drawer-target="default-sidebar" 
           data-drawer-toggle="default-sidebar"
           type="button" 
-          class="order-3 inline-flex items-center z-50 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" 
+          class="order-3 inline-flex items-center z-50 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" 
           aria-controls="default-sidebar" 
           aria-expanded="false"
           onClick={toggleMenu}

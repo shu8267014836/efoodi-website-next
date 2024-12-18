@@ -16,7 +16,7 @@ export default function Header_main() {
 
   return (
     <nav class=" m-auto pt-8 mb-8">
-      <div class="md:w-11/12 flex flex-wrap items-center justify-between mx-auto lg:shadow-2xl p-4 px-10 rounded-full">
+      <div class="md:w-11/12 flex flex-wrap items-center justify-between mx-auto lg:shadow-2xl p-4 px-6 lg:px-10 rounded-full">
         <Link
           href={"/eng/"}
           class="flex items-center space-x-3 rtl:space-x-reverse order-2 lg:order-1"
@@ -38,7 +38,7 @@ export default function Header_main() {
           data-drawer-target="default-sidebar" 
           data-drawer-toggle="default-sidebar"
           type="button" 
-          class="order-3 inline-flex items-center z-50 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" 
+          class="order-3 inline-flex items-center z-50 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" 
           aria-controls="default-sidebar" 
           aria-expanded="false"
           onClick={toggleMenu}

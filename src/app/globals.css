@@ -168,7 +168,7 @@ a {
   }
 
   .appbtn{
-    @apply lg:w-auto border border-black py-2 px-2 lg:px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center
+    @apply lg:w-auto border border-black p-1 py-2 lg:px-5 hover:bg-opacity-80 rounded-lg text-sm text-start flex flex-row items-center
   }
   .appbtn:hover{
     @apply bg-black text-white

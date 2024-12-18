@@ -25,7 +25,7 @@ export default function Home() {
     <div class="max-w-full lg:w-10/12" dir="rtl">
       <Nav />
 
-      <section class="max-w-full text-black body-font mx-6 mb-16">
+      <section class="max-w-full text-black body-font mx-4 lg:mx-6 mb-16">
         <div class="grid lg:grid-cols-2 items-end lg:px-4 pt-5">
           <div class="flex flex-col mb-16">
             <h1 class="text-3xl xl:text-5xl mb-4 font-bold [&&]:leading-tight text-right">احصل على طعامك المفضل
@@ -37,7 +37,7 @@ export default function Home() {
             <div className="flex">
               <div class="flex justify-center w-1/3 lg:w-auto">
                 <button class="appbtn"> 
-                  <div class="text-2xl me-1 lg:me-3"><FaApple /></div>
+                  <div class="text-xl lg:text-2xl me-1 lg:me-3"><FaApple /></div>
                   <div>
                     <span class="text-gray-400 text-xs">Download on</span><br/>
                     <span class="text-start">App Store</span>
@@ -47,7 +47,7 @@ export default function Home() {
 
               <div class="flex justify-center w-1/3 lg:w-auto lg:mx-6 lg:my-0">
                 <button class="appbtn"> 
-                  <div class="text-2xl me-1 lg:me-3"><FaGooglePlay /></div>
+                  <div class="text-xl lg:text-2xl me-1 lg:me-3"><FaGooglePlay /></div>
                   <div>
                     <span class="text-gray-400 text-xs">Download on</span><br/>
                     <span class="text-start">Google Play</span>
@@ -57,7 +57,7 @@ export default function Home() {
 
               <div class="flex justify-center w-1/3 lg:w-auto">
                 <button class="appbtn"> 
-                  <div class="text-2xl me-1 lg:me-3"><SiHuawei /></div>
+                  <div class="text-xl lg:text-2xl me-1 lg:me-3"><SiHuawei /></div>
                   <div>
                     <span class="text-gray-400 text-xs">Download on</span><br/>
                     <span class="text-start">App Gallery</span>
